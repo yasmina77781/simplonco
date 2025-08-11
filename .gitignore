@@ -8,3 +8,4 @@ Thumbs.db
 # IDEs / éditeurs
 .vscode/
 .idea/
+node_modules/
