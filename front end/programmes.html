@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SIMPLONCODE</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="../assets/LOGO2.jpg"
+      type="image/x-icon"
+      class="icon"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  </head>
+  <body>
+    <section class="all">
+      <nav>
+        <div class="photo">
+          <img class="logo" src="../assets/LOGO2.jpg" alt="logo" />
+          <p>SIMPLONCODE</p>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+        <div class="liste">
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="programmes.html">Programmes</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </section>
+    <section class="formulaire">
+      <h1>Nos formations</h1>
+      <div
+        class="card-container"
+        role="list"
+        aria-label="Liste des programmes"
+      ></div>
+      <h2>Ajouter une formation</h2>
+      <form id="add-form">
+        <input type="text" id="titre" placeholder="Titre" required />
+        <textarea
+          id="description"
+          placeholder="Description"
+          maxlength="150"
+          required
+        ></textarea>
+        <input type="text" id="duree" placeholder="Durée" required />
+        <input
+          type="text"
+          id="competences"
+          placeholder="Compétences"
+          required
+        />
+        <button type="submit" id="submit">Ajouter</button>
+      </form>
+    </section>
+    <footer>
+      <div class="footer-left">
+        <img src="../assets/LOGO2.jpg" alt="logo" class="footer-logo" />
+        <span>simploncode@gmail.com</span>
+      </div>
+      
+      <div class="footer-center">
+        <p>&copy; 2025 simploncode. Tous droits réservés.</p>
+      </div>
+      
+      <div class="footer-right">
+        <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

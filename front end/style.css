@@ -1,0 +1,537 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f9f9f9;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+nav {
+  background-color: #0e0b0b1f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  color: #ce0033;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 2px solid #eeeeee60;
+}
+
+.liste {
+  overflow: visible;   
+  transition: none;     
+}
+
+
+.liste.active {
+  max-height: 500px;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #ce0033;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.liste ul {
+  display: flex;
+  gap: 50px;
+  margin: 0;
+  padding: 0;
+}
+
+.liste li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #ce0033;
+  font-weight: 500;
+  padding: 6px 10px;
+  transition: background-color 0.3s ease;
+}
+.footer-right a i{
+  font-size: 25px;
+}
+a:hover {
+  background-color: #ce0033;
+  color: white;
+  border-radius: 5px;
+}
+
+.logo {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.photo {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e8e7e7;
+  padding: 15px 40px;
+  border-top: 1px solid #ddd;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-left .footer-logo {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+.footer-center {
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.footer-right a {
+  color: black;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+/* Programmes */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: 2px solid #eee;
+  border-radius: 16px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  min-height: 350px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cards::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #ce0033;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.cards:hover::after {
+  transform: scaleX(1);
+}
+
+.cards a {
+  margin-top: auto;
+}
+.cards:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.chapeau {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+/* Formulaires */
+.formulaire h1,
+h2 {
+  text-align: center;
+  color: #ce0033;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+#add-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
+  margin: 30px auto;
+  max-width: 1000px;
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+#add-form input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+#add-form input:focus {
+  border-color: #ce0033;
+  box-shadow: 0 0 5px rgba(206, 0, 51, 0.3);
+}
+#add-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#add-form button {
+  background-color: #ce0033;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#add-form button:hover {
+  background-color: #a90228;
+  transform: scale(1.02);
+}
+
+.success-message {
+  text-align: center;
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Home */
+#hero {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ce0033;
+  text-align: center;
+}
+
+#hero h1.titre {
+  font-size: 2.8em;
+  max-width: 600px;
+  color: white;
+  font-weight: bold;
+}
+
+#hero a {
+  margin-top: 30px;
+  background-color: white;
+  color: black;
+  padding: 12px 25px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  border: 2px solid black;
+  transition: 0.3s ease;
+}
+
+#hero a:hover {
+  background-color: #f2f2f2;
+}
+
+#bienvenue{
+  display: flex;
+  margin:  0 10px;
+  margin-top: 60px;
+}
+.image-container img{
+  height: 300px;
+  width: 400px;
+}
+.grp1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 70%;
+}
+.grp1 p {
+  max-width: 600px;
+  text-align: center;
+}
+#avantages{
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-top:1px solid black ;
+}
+
+li{
+  list-style: none;
+  font-size: larger;
+  padding: 10px;
+}
+.un{
+  position: relative;
+  left: 30px;
+}
+.deux{
+  position: relative;
+  left: 60px;
+}
+
+/* Contact */
+#tout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 78vh;
+  gap: 20px;
+}
+.contact-form {
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin: 20px 40px;
+  box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.252);
+  width: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background-color: #ce0033;
+  transition: width 0.3s ease;
+}
+
+.contact-form:hover::before {
+  width: 10px;
+}
+
+.formulaire2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 40px;
+  gap: 10px;
+}
+.formulaire2 label{
+  text-align: left !important;
+  width: 60%;
+}
+
+.formulaire2 input {
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 15px;
+  outline: none;
+  border: none;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.252);
+  width: 60%;
+}
+
+.formulaire2 input:focus {
+  border-color: #ce0033;
+  box-shadow: 0 0 5px rgba(206, 0, 51, 0.3);
+}
+.formulaire2 textarea {
+  padding: 7px;
+  border-radius: 5px;
+  width: 60%;
+  box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.252);
+  border: none;
+}
+.contact-form h1 {
+  color: #ce0033 ;
+}
+
+.contact-form button {
+  background-color: #ce0033;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s;
+  width: 150px;
+  margin: 20px;
+}
+
+.contact-form button:hover {
+  background-color: #a90228;
+  transform: scale(1.02);
+}
+.map {
+  text-align: center;
+}
+.map h1 {
+  color: #ce0033;
+  margin-top: 35px;
+}
+.map img {
+  margin-top: 50px;
+}
+
+/* Responsive  PARTIE CONTACT */
+@media (max-width: 992px) {
+  #tout {
+    grid-template-columns: 1fr; /* empile les blocs */
+    height: auto;
+  }
+
+  .contact-form {
+    width: 90%; /* prend presque toute la largeur */
+    margin: 20px auto;
+  }
+
+  .map img {
+    width: 90%;
+    height: auto;
+  }
+  /* pour programmes */
+  .card-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 0 10px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;}
+  /* pour home */
+  #bienvenue {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .grp1 {
+    width: 100%;
+  }
+
+  .image-container img {
+    width: 80%;
+    height: auto;
+    margin-top: 20px;
+  }
+}
+
+
+/* Pour téléphones */
+@media (max-width: 600px) {
+  .formulaire2 label,
+  .formulaire2 input,
+  .formulaire2 textarea {
+    width: 100%; /* champs pleine largeur */
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  .liste {
+    display: none;
+  }
+
+  .liste.active {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .liste ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  /* pour programmes */
+  .card-container {
+    grid-template-columns: 1fr; /* Une carte par ligne */
+    gap: 15px;
+    padding: 0 10px;
+  }
+   form#add-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  form#add-form input,
+  form#add-form textarea,
+  form#add-form button {
+    width: 100%;
+  }
+  /* pour home  */
+  #hero h1.titre {
+    font-size: 1.8em;
+    padding: 0 15px;
+  }
+
+  #bienvenue {
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  .grp1 p {
+    padding: 0 10px;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: auto;
+  }
+
+  #avantages ul {
+    padding: 0;
+    text-align: left;
+  }
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+html, body {
+  overflow-x: hidden;
+}
+}

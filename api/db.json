@@ -1,3 +1,67 @@
 {
-    "programmes":[]
+  "programmes": [
+    {
+      "titre": "Développement Web",
+      "description": "Apprenez HTML, CSS, JS",
+      "durée": "3 mois",
+      "compétences": "Frontend, Backend",
+      "id": "f7c8"
+    },
+    {
+      "titre": "Bases de données SQL",
+      "description": "Maîtrisez la modélisation relationnelle et les requêtes SQL.",
+      "durée": "4 semaines",
+      "compétences": "MySQL, PostgreSQL",
+      "id": "ab4b"
+    },
+    {
+      "titre": "Python pour l’analyse de données",
+      "description": "Utilisez Python pour manipuler, visualiser et analyser des données.",
+      "durée": "5 semaines",
+      "compétences": "Pandas, Matplotlib, NumPy",
+      "id": "3bd8"
+    },
+    {
+      "titre": "Sécurité informatique",
+      "description": "Apprenez les bases de la cybersécurité et la protection des systèmes.",
+      "durée": "3 semaines",
+      "compétences": "Réseaux, cryptographie, pare-feu",
+      "id": "9b09"
+    },
+    {
+      "id": "2ece",
+      "titre": "vv",
+      "description": "jhvygba",
+      "durée": "hjvxjha",
+      "compétences": "jbaa"
+    },
+    {
+      "id": "76e8",
+      "titre": "nss",
+      "description": "nj",
+      "durée": "sss",
+      "compétences": "ss"
+    },
+    {
+      "id": "cc27",
+      "titre": "vv",
+      "description": "nn",
+      "durée": "bn",
+      "compétences": "nn"
+    },
+    {
+      "id": "1b48",
+      "titre": "n",
+      "description": "nn",
+      "durée": "nn",
+      "compétences": "nn"
+    },
+    {
+      "id": "61de",
+      "titre": "hbhv",
+      "description": "txxhfc",
+      "durée": "hxhf",
+      "compétences": "gtctg"
+    }
+  ]
 }
